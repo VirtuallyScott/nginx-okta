@@ -1,0 +1,13 @@
+---
+oauth:
+  provider: oidc
+  client_id: {yourClientID}
+  client_secret: {yourClientSecret}
+  auth_url: https://{yourOktaDomain}/oauth2/default/v1/authorize
+  token_url: https://{yourOktaDomain}/oauth2/default/v1/token
+  user_info_url: https://{yourOktaDomain}/oauth2/default/v1/userinfo
+  scopes:
+    - openid
+    - email
+  # Set the callback URL to the domain that Vouch is running on
+  callback_url: https://login.avocado.lol/auth
